@@ -4,7 +4,7 @@ import keyboard, pyautogui, pytesseract
 from PIL import Image, ImageOps, ImageFilter
 
 import os, google.generativeai as genai
-genai.configure(api_key="AIzaSyA7XsGCGHV0d8tjS8zFnp3Au9bmTROW_hk")
+genai.configure(api_key="")
 for m in genai.list_models():
     if "generateContent" in m.supported_generation_methods:
         print(m.name)
@@ -99,7 +99,7 @@ def ask_gemini(question_text: str) -> dict:
     """
     import google.generativeai as genai
 
-    api_key = "AIzaSyA7XsGCGHV0d8tjS8zFnp3Au9bmTROW_hk"
+    api_key = ""
     if not api_key:
         raise RuntimeError("Set GOOGLE_API_KEY environment variable.")
 
